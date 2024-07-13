@@ -98,17 +98,33 @@ const FAQAccordion = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto mt-32">
-      <h2 className="text-3xl font-bold text-center mb-8">FAQ's</h2>
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 bg-gray-100">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+          FAQ's
+        </h2>
 
-      <Accordion type="multiple">
-        {faqData.map((faq, index) => (
-          <AccordionItem key={`faq-${index}`} value={`faq-${index}`}>
-            <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+        <Accordion type="multiple" className="space-y-4">
+          {faqData.map((faq, index) => (
+            <AccordionItem
+              key={`faq-${index}`}
+              value={`faq-${index}`}
+              className="bg-white rounded-lg shadow"
+            >
+              <AccordionTrigger className="px-4 py-3 sm:px-6 sm:py-4 text-left">
+                <span className="text-sm sm:text-base font-medium">
+                  {faq.question}
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="px-4 pb-3 sm:px-6 sm:pb-4">
+                <p className="text-sm sm:text-base text-gray-600">
+                  {faq.answer}
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
     </div>
   );
 };

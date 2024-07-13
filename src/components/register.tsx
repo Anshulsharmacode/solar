@@ -1,12 +1,10 @@
+import LeadForm from "./leadForm";
 
-import LeadForm from './leadForm'
-
-const Register =() => {
+const Register = () => {
   return (
     <div>
-        <LeadForm/>
-      
+      <LeadForm />
     </div>
   );
-}
+};
 export default Register;

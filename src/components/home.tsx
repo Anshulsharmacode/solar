@@ -6,20 +6,40 @@ import Roadmap from "./roadmap";
 import FAQAccordion from "./faq";
 import Footer from "./footer";
 import LogoGrid from "./logoGrid";
-import Pm from "./Pm"
-
+import Pm from "./Pm";
+import SolarInfo from "./myth";
+import SolarSystemCard from "./grid";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css/animate.min.css";
+import OutSolutions from "./outSolutions";
+import CustomerTestimonials from "./hear"
 const Home: React.FC = () => {
   return (
     <div>
       <CarouselComponent />
-      
+      <OutSolutions />
       <LeadForm />
       <LogoGrid />
       <WhyChooseUs />
+      <div
+        className="h-64"
+        style={{
+          backgroundImage: `url("/carousel/groupSetup.jpg")`,
+          backgroundAttachment: "fixed",
+          backgroundPosition: "top left",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
       <Roadmap />
-      <Pm/>
+      <Pm />
+      <SolarSystemCard />
+      <CustomerTestimonials/>
+      <SolarInfo />
+      
       <FAQAccordion />
-      <Footer />
+      <LeadForm />
     </div>
   );
 };

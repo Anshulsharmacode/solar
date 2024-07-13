@@ -29,17 +29,17 @@ module.exports = {
       "gray-800": "#1d2939",
       "gray-900": "#101828",
 
-      /* primary color - Orange */
-      "primary-50": "#FFF7F0",
-      "primary-100": "#FFEBDA",
-      "primary-200": "#FFD4B5",
-      "primary-300": "#FFBD8F",
-      "primary-400": "#FFA56A",
-      "primary-500": "#E87D3B",
-      "primary-600": "#FE6100",
-      "primary-700": "#CC4E00",
-      "primary-800": "#993B00",
-      "primary-900": "#662800",
+      /* primary color - Purple */
+      "primary-50": "#F5F0FF",
+      "primary-100": "#EADAFF",
+      "primary-200": "#D4B5FF",
+      "primary-300": "#BD8FFF",
+      "primary-400": "#A56AFF",
+      "primary-500": "#7D3BE8",
+      "primary-600": "#6100FE",
+      "primary-700": "#4E00CC",
+      "primary-800": "#3B0099",
+      "primary-900": "#280066",
 
       /* secondary color */
       "secondary-bg": "#310d20",
