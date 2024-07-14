@@ -1,15 +1,42 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { MenuIcon } from "lucide-react";
-import AboutUs from "./AboutUs";
-import Register from "./register";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const scrollToPMSuryaScheme = () => {
+    if (window.location.pathname === "/") {
+      const element = document.getElementById("pm-surya-scheme");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/", { state: { scrollTo: "pm-surya-scheme" } });
+    }
+    closeMenu();
+  };
+
+  useEffect(() => {
+    if (
+      window.location.pathname === "/" &&
+      window.history.state?.state?.scrollTo === "pm-surya-scheme"
+    ) {
+      const element = document.getElementById("pm-surya-scheme");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
 
   return (
     <nav className="bg-primary-600 text-white font-sans w-screen">
@@ -19,7 +46,7 @@ function Navbar() {
           <p>There is no end to my divine manifestations and glories</p>
         </div>
       </div>
-      <div className="flex justify-between items-center px-16 py-2">
+      <div className="flex justify-between items-center px-4 md:px-16 py-2">
         <div className="flex items-center">
           <img src="./logo.png" alt="Logo" className="h-24 w-24 mx-4" />
         </div>
@@ -31,33 +58,29 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="/about"
+            to="/AboutUs"
             className="hover:bg-white hover:text-black px-3 py-2 rounded"
           >
             About
           </Link>
-          <Link
-            to="/pm-surya-ghar"
+          <button
+            onClick={scrollToPMSuryaScheme}
             className="hover:bg-white hover:text-black px-3 py-2 rounded"
           >
             PM Surya Ghar
-          </Link>
+          </button>
           <Link
             to="/contact"
             className="hover:bg-white hover:text-black px-3 py-2 rounded"
           >
             Contact
           </Link>
-          
-            <Link
-              to="/register "
-              className="block hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
-              
-            >
-              Register Now for Free Solar Saving
-            </Link>
-          
-
+          <Link
+            to="/register"
+            className="hover:bg-white hover:text-black px-3 py-2 rounded"
+          >
+            Register Now for Free Solar Saving
+          </Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu}>
@@ -71,7 +94,7 @@ function Navbar() {
             <Link
               to="/"
               className="block hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               Home
             </Link>
@@ -80,34 +103,33 @@ function Navbar() {
             <Link
               to="/AboutUs"
               className="block hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
-              onClick={AboutUs}
+              onClick={closeMenu}
             >
               About
             </Link>
           </li>
           <li>
-            <Link
-              to="/pm-surya-ghar"
-              className="block hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
-              onClick={toggleMenu}
+            <button
+              onClick={scrollToPMSuryaScheme}
+              className="block w-full text-left hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
             >
               PM Surya Ghar
-            </Link>
+            </button>
           </li>
           <li>
             <Link
               to="/contact"
               className="block hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               Contact
             </Link>
           </li>
           <li>
             <Link
-              to="/Register Now for Free Solar Saving"
-              className="block hover:bg-white hover:text-black hover:text-white px-3 py-2 rounded"
-              onClick={Register}
+              to="/register"
+              className="block hover:bg-white hover:text-primary hover:text-white px-3 py-2 rounded"
+              onClick={closeMenu}
             >
               Register Now for Free Solar Saving
             </Link>

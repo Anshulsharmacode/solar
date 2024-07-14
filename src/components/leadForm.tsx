@@ -3,7 +3,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 interface FormData {
   firstName: string;
   lastName: string;
-  monthlyBillOptions: string[];
+  monthlyBillOptions: string;
   pinCode: string;
   city: string;
   email: string;
@@ -13,7 +13,7 @@ const LeadForm = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
-    monthlyBillOptions: [],
+    monthlyBillOptions: "",
     pinCode: "",
     city: "",
     email: "",
@@ -28,21 +28,10 @@ const LeadForm = () => {
   };
 
   const handleBadgeClick = (badge: string): void => {
-    const index = formData.monthlyBillOptions.indexOf(badge);
-    if (index === -1) {
-      setFormData({
-        ...formData,
-        monthlyBillOptions: [...formData.monthlyBillOptions, badge],
-      });
-    } else {
-      const updatedOptions = formData.monthlyBillOptions.filter(
-        (option) => option !== badge
-      );
-      setFormData({
-        ...formData,
-        monthlyBillOptions: updatedOptions,
-      });
-    }
+    setFormData({
+      ...formData,
+      monthlyBillOptions: badge,
+    });
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
@@ -56,6 +45,7 @@ const LeadForm = () => {
       city: formData.city,
       email: formData.email,
     };
+
     console.log("Form Data:", data);
 
     // Here you can perform API calls or further processing
@@ -63,29 +53,36 @@ const LeadForm = () => {
     setFormData({
       firstName: "",
       lastName: "",
-      monthlyBillOptions: [],
+      monthlyBillOptions: "",
       pinCode: "",
       city: "",
       email: "",
     });
   };
-
   return (
-    <div id="leadform" className="flex justify-between items-center h-screen">
+    <div
+      id="leadform"
+      className="pt-4 md:p-8 lg:p-24 flex flex-col md:flex-row justify-between items-center min-h-screen bg-primary-500"
+    >
       {/* Left Side Content */}
-      <div className="flex-1 p-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">
-          Reduce Your Electricity Bill
+      <div className="w-full md:w-1/2 text-left text-white mb-0 lg:mb-8 p-8 lg:p-28">
+        <h2 className="text-3xl lg:text-6xl font-bold">Claim your</h2>
+        <h2 className="text-3xl lg:text-6xl font-bold text-primary-900">
+          FREE consultation
         </h2>
-        <p className="text-gray-600 mb-4">
-          Fill out the form below to get started on reducing your monthly
-          electricity bill.
+        <h2 className="text-3xl lg:text-6xl font-bold mb-4">now!</h2>
+        <p className="mb-4 text-sm lg:text-base">
+          Receive honest insights from our solar professionals. No pressure,
+          only proceed if you're confident.
         </p>
       </div>
 
       {/* Right Side Form */}
-      <div className="flex-1 p-8">
-        <form className="max-w-lg" onSubmit={handleSubmit}>
+      <div className="w-full md:w-1/2 p-12">
+        <form
+          className="mx-auto bg-white p-4 lg:p-12 rounded shadow-lg border-radius-24"
+          onSubmit={handleSubmit}
+        >
           <div className="mb-4">
             <label
               htmlFor="firstName"
@@ -122,26 +119,56 @@ const LeadForm = () => {
             <label className="block text-sm font-medium text-gray-700">
               Monthly Bill Options
             </label>
-            <div className="mt-1 flex justify-left">
+            <div className="mt-1 flex flex-wrap justify-start text-sm">
               <div
-                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 ${
-                  formData.monthlyBillOptions.includes("Option 1")
+                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 mb-2 ${
+                  formData.monthlyBillOptions === "less than ₹1500"
                     ? "bg-primary-600 text-white"
                     : ""
                 }`}
-                onClick={() => handleBadgeClick("Option 1")}
+                onClick={() => handleBadgeClick("less than ₹1500")}
               >
-                Option 1
+                less than ₹1500
               </div>
               <div
-                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 ${
-                  formData.monthlyBillOptions.includes("Option 2")
+                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 mb-2 ${
+                  formData.monthlyBillOptions === "₹1500 - ₹2500"
                     ? "bg-primary-600 text-white"
                     : ""
                 }`}
-                onClick={() => handleBadgeClick("Option 2")}
+                onClick={() => handleBadgeClick("₹1500 - ₹2500")}
               >
-                Option 2
+                ₹1500 - ₹2500
+              </div>
+              <div
+                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 mb-2 ${
+                  formData.monthlyBillOptions === "₹2500 - ₹4000"
+                    ? "bg-primary-600 text-white"
+                    : ""
+                }`}
+                onClick={() => handleBadgeClick("₹2500 - ₹4000")}
+              >
+                ₹2500 - ₹4000
+              </div>
+              <div
+                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 mb-2 ${
+                  formData.monthlyBillOptions === "₹4000 - ₹8000"
+                    ? "bg-primary-600 text-white"
+                    : ""
+                }`}
+                onClick={() => handleBadgeClick("₹4000 - ₹8000")}
+              >
+                ₹4000 - ₹8000
+              </div>
+              <div
+                className={`cursor-pointer border border-primary-500 text-black px-3 py-1 rounded-md mr-2 mb-2 ${
+                  formData.monthlyBillOptions === "more than ₹8000"
+                    ? "bg-primary-600 text-white"
+                    : ""
+                }`}
+                onClick={() => handleBadgeClick("more than ₹8000")}
+              >
+                more than ₹8000
               </div>
               {/* Add more options as needed */}
             </div>
@@ -200,7 +227,7 @@ const LeadForm = () => {
           </div>
           <button
             type="submit"
-            className="bg-primary-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+            className="w-full bg-primary-500 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-md transition duration-300"
           >
             Yes, reduce my electricity bill
           </button>

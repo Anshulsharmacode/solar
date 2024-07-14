@@ -52,17 +52,17 @@
     --gray-900: #101828;
 
     /* primary color */
-    --primary-25: #fffaf0;
-    --primary-50: #fff4e0;
-    --primary-100: #ffe8c2;
-    --primary-200: #ffdb99;
-    --primary-300: #ffcc66;
-    --primary-400: #ffb833;
-    --primary-500: #e87d3b;
-    --primary-600: #fe6100;
-    --primary-700: #cc6600;
-    --primary-800: #b34c00;
-    --primary-900: #993300;
+    --primary-25: #f5f0ff;
+    --primary-50: #eadaff;
+    --primary-100: #d4b5ff;
+    --primary-200: #bd8fff;
+    --primary-300: #a56aff;
+    --primary-400: #7d3be8;
+    --primary-500: #6100fe;
+    --primary-600: #4e00cc;
+    --primary-700: #3b0099;
+    --primary-800: #280066;
+    --primary-900: #190033;
 
     /* secondary colors */
     --secondary-blue-500: #2e90fa;
@@ -164,16 +164,17 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
 
-@layer base {
+  body {
+    width: 100%; /* Set body width to full viewport width */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    font-family: "Montserrat", sans-serif; /* Set default font to Montserrat */
+  }
+
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    -webkit-tap-highlight-color: transparent;
-    font-family: "montserrat", sans-serif;
   }
 
   html {
