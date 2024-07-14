@@ -4,7 +4,7 @@ import LeadForm from "./leadForm";
 import WhyChooseUs from "./whyUs";
 import Roadmap from "./roadmap";
 import FAQAccordion from "./faq";
-import Footer from "./footer";
+
 import LogoGrid from "./logoGrid";
 import Pm from "./Pm";
 import SolarInfo from "./myth";

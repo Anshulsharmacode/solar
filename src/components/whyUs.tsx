@@ -1,8 +1,8 @@
-import { GiStarFormation, GiSolarPower } from "react-icons/gi";
+import { GiSolarPower } from "react-icons/gi";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { FaMoneyCheckAlt, FaHammer } from "react-icons/fa";
 import { MdPeople } from "react-icons/md";
-import { ReactNode, useEffect, useState, useRef } from "react";
+import { ReactNode,  useRef } from "react";
 import { HiMiniBuildingOffice2 } from "react-icons/hi2";
 import { motion, useInView } from "framer-motion";
 
@@ -25,18 +25,9 @@ const FeatureItem = ({ icon, title, description }: featureItemInterface) => {
 };
 
 const WhyChooseUs = () => {
-  const [isFirstVisit, setIsFirstVisit] = useState(true);
+  
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisitedWhyUs");
-    if (hasVisited) {
-      setIsFirstVisit(false);
-    } else {
-      localStorage.setItem("hasVisitedWhyUs", "true");
-    }
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },

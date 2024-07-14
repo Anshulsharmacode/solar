@@ -66,7 +66,7 @@ const SolarSystemCardComponent: React.FC<SolarSystemCardProps> = ({
   pros,
   cons,
   icon,
-  color,
+  
 }) => {
   return (
     <Card className="h-full flex flex-col">
