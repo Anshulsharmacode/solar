@@ -42,13 +42,13 @@ function Navbar() {
     <nav className="bg-primary-600 text-white font-sans w-screen">
       <div className="flex justify-center items-center bg-black text-white py-2">
         <div className="text-center">
-          <p>नान्तोऽस्ति मम दिव्यानां विभूतीनां</p>
+          <p>नान्तोऽस्ति मम दिव्यानां विभूतीनां परन्तप ।</p>
           <p>There is no end to my divine manifestations and glories</p>
         </div>
       </div>
       <div className="flex justify-between items-center px-4 md:px-16 py-2">
         <div className="flex items-center">
-          <img src="./logo.png" alt="Logo" className="h-24 w-24 mx-4" />
+          <img src="./logossa.png" alt="Logo" className="h-24 w-24 mx-4" />
         </div>
         <div className="hidden md:flex space-x-4">
           <Link
@@ -63,12 +63,7 @@ function Navbar() {
           >
             About
           </Link>
-          <button
-            onClick={scrollToPMSuryaScheme}
-            className="hover:bg-white hover:text-black px-3 py-2 rounded"
-          >
-            PM Surya Ghar
-          </button>
+         
           <Link
             to="/contact"
             className="hover:bg-white hover:text-black px-3 py-2 rounded"
