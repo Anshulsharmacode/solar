@@ -48,7 +48,7 @@ function Navbar() {
       </div>
       <div className="flex justify-between items-center px-4 md:px-16 py-2">
         <div className="flex items-center">
-          <img src="./logo.png" alt="Logo" className="h-24 w-24 mx-4" />
+          <p className="text-2xl font-bold">Solar Solutions</p>
         </div>
         <div className="hidden md:flex space-x-4">
           <Link

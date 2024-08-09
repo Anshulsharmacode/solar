@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Left Section */}
           <div className="text-center sm:text-left mb-6 sm:mb-0">
             <h3 className="text-lg sm:text-xl font-bold mb-2">
-              Aditya Solar Solutions
+              Solar Solutions
             </h3>
             <p className="text-xs sm:text-sm text-left">
               © {new Date().getFullYear()} All rights reserved

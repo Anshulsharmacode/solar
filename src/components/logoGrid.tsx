@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 
 const LogoGrid = () => {
   const logos = [
-    { id: 1, name: "tata-logo.png", imageUrl: "./public/tata-logo.png" },
+    { id: 1, name: "tata-logo.png", imageUrl: "/tata-logo.png" },
     {
       id: 2,
       name: "Adani-Logo-PNG-Cutout.png",
-      imageUrl: "./public/Adani-Logo-PNG-Cutout.png",
+      imageUrl: "/Adani-Logo-PNG-Cutout.png",
     },
     {
       id: 3,
       name: "UTL-Solar-Logo-PNG.png",
-      imageUrl: "./public/UTL-Solar-Logo-PNG.png",
+      imageUrl: "/UTL-Solar-Logo-PNG.png",
     },
     {
       id: 4,
       name: "waaree-solar-logo.png",
-      imageUrl: "./public/waaree-solar-logo.png",
+      imageUrl: "/waaree-solar-logo.png",
     },
-    { id: 5, name: "images.png", imageUrl: "./public/images.png" },
+    { id: 5, name: "images.png", imageUrl: "/images.png" },
   ];
 
   const [width, setWidth] = useState(0);
@@ -57,6 +57,7 @@ const LogoGrid = () => {
                 alt={logo.name}
                 className="w-full h-full object-contain"
                 height={"64px"}
+                style={{ transition: "all 0.3s ease" }} // Added smooth transition
               />
             </motion.div>
           ))}
