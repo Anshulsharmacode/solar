@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, Sun, Phone } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +40,32 @@ function Navbar() {
 
   return (
     <nav className="bg-primary-600 text-white font-sans w-screen">
+      <div className="bg-gradient-to-r from-green-600 to-green-800 text-white py-3 px-4 shadow-md">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-2 mb-2 md:mb-0">
+            <Sun className="h-6 w-6 text-yellow-300" />
+            <p className="text-xl font-bold">Special Offer</p>
+          </div>
+          <div className="text-center mb-2 md:mb-0 flex-grow">
+            <p className="text-lg font-semibold">
+              Get this website now for just ₹10,000 or $200
+            </p>
+            <p className="text-sm">
+              Limited time offer. Contact us for details or your own custom
+              website.
+            </p>
+          </div>
+          <div className="flex items-center space-x-2">
+            <a
+              href="tel:+917489989634"
+              className="flex items-center bg-white text-green-800 font-bold py-2 px-4 rounded transition duration-300 hover:bg-green-100"
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              <span className="hidden md:inline">Call:</span> +91 7489 989 634
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="flex justify-center items-center bg-black text-white py-2">
         <div className="text-center">
           <p>नान्तोऽस्ति मम दिव्यानां विभूतीनां</p>

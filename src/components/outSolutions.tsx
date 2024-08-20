@@ -11,7 +11,7 @@ const OutSolutions: React.FC = () => {
   ];
 
   return (
-    <div className="bg-primary-100 p-8 min-h-screen">
+    <div className="bg-primary-100 p-8 py-24 min-h-screen">
       <h2 className="text-4xl font-bold text-center mb-12 text-primary-500">
         Our Solutions
       </h2>

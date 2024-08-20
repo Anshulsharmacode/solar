@@ -2,7 +2,7 @@ import { GiSolarPower } from "react-icons/gi";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { FaMoneyCheckAlt, FaHammer } from "react-icons/fa";
 import { MdPeople } from "react-icons/md";
-import { ReactNode,  useRef } from "react";
+import { ReactNode, useRef } from "react";
 import { HiMiniBuildingOffice2 } from "react-icons/hi2";
 import { motion, useInView } from "framer-motion";
 
@@ -25,7 +25,6 @@ const FeatureItem = ({ icon, title, description }: featureItemInterface) => {
 };
 
 const WhyChooseUs = () => {
-  
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -52,10 +51,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <div
-      className="bg-primary-500 p-4 sm:p-8 md:p-16 lg:p-24 justify-center"
-      ref={ref}
-    >
+    <div className="bg-primary-500 px-4 py-24 justify-center" ref={ref}>
       <motion.h2
         className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8 text-white pb-8"
         initial={{ opacity: 0, y: -20 }}

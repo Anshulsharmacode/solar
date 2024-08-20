@@ -46,15 +46,27 @@ module.exports = {
       "third-bg": "#171219",
 
       /* additional colors */
-      "accent-100": "#E0F2F1",
-      "accent-200": "#B2DFDB",
-      "accent-300": "#80CBC4",
-      "accent-400": "#4DB6AC",
-      "accent-500": "#26A69A",
-      "accent-600": "#009688",
-      "accent-700": "#00897B",
-      "accent-800": "#00796B",
-      "accent-900": "#004D40",
+      "accent-100": "#E0F2F1", // Very light teal
+      "accent-200": "#B2DFDB", // Light teal
+      "accent-300": "#80CBC4", // Soft teal
+      "accent-400": "#4DB6AC", // Medium teal
+      "accent-500": "#26A69A", // Teal
+      "accent-600": "#009688", // Dark teal
+      "accent-700": "#00897B", // Deeper teal
+      "accent-800": "#00796B", // Very dark teal
+      "accent-900": "#004D40", // Darkest teal
+
+      /* green */
+      "green-50": "#E8F5E9",
+      "green-100": "#C8E6C9",
+      "green-200": "#A5D6A7",
+      "green-300": "#81C784",
+      "green-400": "#66BB6A",
+      "green-500": "#4CAF50",
+      "green-600": "#43A047",
+      "green-700": "#388E3C",
+      "green-800": "#2E7D32",
+      "green-900": "#1B5E20",
 
       /* other colors */
       black: "#1b1b1b",

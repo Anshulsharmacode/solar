@@ -66,7 +66,6 @@ const SolarSystemCardComponent: React.FC<SolarSystemCardProps> = ({
   pros,
   cons,
   icon,
-  
 }) => {
   return (
     <Card className="h-full flex flex-col">
@@ -187,7 +186,7 @@ const SolarSystemCard: React.FC = () => {
   ];
 
   return (
-    <div className="bg-primary-100 p-4 md:p-12">
+    <div className="bg-primary-100 px-4 py-24">
       <Typography variant="h2" className="text-center mb-6 md:mb-8">
         Choose Your Solar System
       </Typography>
