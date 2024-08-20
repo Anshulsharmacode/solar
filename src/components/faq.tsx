@@ -52,7 +52,7 @@ const FAQAccordion = () => {
       question:
         "What financing options are available for installing solar systems?",
       answer:
-        "Many banks and financial institutions offer loans for solar installations at attractive interest rates. We at Aditya Solar Solutions provide end-to-end low-cost financing options with easy EMI.",
+        "Many banks and financial institutions offer loans for solar installations at attractive interest rates. We at Solar Solutions provide end-to-end low-cost financing options with easy EMI.",
     },
     {
       question: "How long does it take to install a solar system?",

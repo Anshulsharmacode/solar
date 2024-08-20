@@ -52,7 +52,7 @@ const AboutUs: React.FC = () => {
       {/* Introduction Section */}
       <motion.section variants={itemVariants} className="text-center">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-          Welcome to Aditya Solar Solutions
+          Welcome to Solar Solutions
         </h1>
         <p className="text-lg sm:text-xl text-gray-700">
           India's fastest-growing solar system company and a proud certified
@@ -109,10 +109,10 @@ const AboutUs: React.FC = () => {
               Seamless Experience
             </h3>
             <p className="text-gray-700">
-              At Aditya Solar Solutions, we provide a hassle-free journey from
-              initial consultation to ongoing maintenance. Our comprehensive
-              end-to-end solutions ensure efficiency, reliability, and maximum
-              energy savings for your home or business.
+              At Solar Solutions, we provide a hassle-free journey from initial
+              consultation to ongoing maintenance. Our comprehensive end-to-end
+              solutions ensure efficiency, reliability, and maximum energy
+              savings for your home or business.
             </p>
           </div>
 
@@ -188,8 +188,8 @@ const AboutUs: React.FC = () => {
       {/* Call to Action Section */}
       <motion.section variants={itemVariants} className="text-center">
         <p className="text-lg sm:text-xl text-gray-700 mb-6">
-          Join Aditya Solar Solutions in embracing a sustainable future. Let us
-          help you harness the power of the sun and achieve energy independence
+          Join Solar Solutions in embracing a sustainable future. Let us help
+          you harness the power of the sun and achieve energy independence
           effortlessly with our reliable, high-quality solar solutions.
         </p>
         <Button
