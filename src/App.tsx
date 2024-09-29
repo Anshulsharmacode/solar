@@ -5,10 +5,12 @@ import Navbar from "./components/navbar";
 import AboutUs from "./components/AboutUs";
 import Register from "./components/register";
 import Footer from "./components/footer";
+import OfferPopup from "./components/offer";
 
 function App() {
   return (
     <Router>
+      <OfferPopup />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
